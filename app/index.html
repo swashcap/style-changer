@@ -20,34 +20,45 @@
         <script src="bower_components/modernizr/modernizr.js"></script>
         <!-- endbuild -->
     </head>
-    <body>
+    <body ng-app="styleChangerApp">
         <!--[if lt IE 10]>
             <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
 
         <div class="container-fluid">
             <button data-toggle="collapse" data-target="#theme-settings" type="button" class="btn btn-default">Settings</button>
-            <div id="theme-settings" class="well collapse">
-                <form role="form">
+            <div id="theme-settings" class="well collapse in">
+                <form ng-controller="FormCtrl" role="form">
                     <fieldset>
                         <legend>Theme</legend>
-                        <label class="radio-inline">
-                            <input type="radio" name="theme" value="default" checked> Default
-                        </label>
-                        <label class="radio-inline">
-                            <input type="radio" name="theme" value="traditional"> Traditional
-                        </label>
-                        <label class="radio-inline">
-                            <input type="radio" name="theme" value="default"> Dark
+                        <h1>{{ currentTheme }}</h1>
+
+                        <label
+                            ng-repeat="theme in themes"
+                            ng-click="setTheme(theme.slug)"
+                            class="radio-inline">
+                            <input
+                                type="radio"
+                                ng-model="currentTheme"
+                                name="theme"
+                                value="{{ theme.slug }}"> {{ theme.name }}
+
+                                <!-- ng-change="setTheme(theme.slug)" -->
                         </label>
                     </fieldset>
                     <div class="form-group">
                         <label>Width</label>
-                        <input type="range" min="1" max="5" step="1" value="2">
+                        <input
+                            type="range"
+                            ng-model="currentWidth"
+                            min="1" max="5" step="1">
                     </div>
                     <div class="form-group">
                         <label>Line Spacing</label>
-                        <input type="range" min="1" max="5" step="1" value="3">
+                        <input
+                            type="range"
+                            ng-model="currentLineSpacing"
+                            min="1" max="5" step="1">
                     </div>
                 </form>
             </div>
@@ -68,6 +79,7 @@
         <!-- build:js scripts/vendor.js -->
         <!-- bower:js -->
         <script src="bower_components/jquery/dist/jquery.js"></script>
+        <script src="bower_components/angular/angular.js"></script>
         <!-- endbower -->
         <!-- endbuild -->
 
