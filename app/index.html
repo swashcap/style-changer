@@ -25,52 +25,45 @@
             <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
 
-        <div class="container">
-            <div class="header">
-                <ul class="nav nav-pills pull-right">
-                    <li class="active"><a href="#">Home</a></li>
-                    <li><a href="#">About</a></li>
-                    <li><a href="#">Contact</a></li>
-                </ul>
-                <h3 class="text-muted">style changer</h3>
+        <div class="container-fluid">
+            <button data-toggle="collapse" data-target="#theme-settings" type="button" class="btn btn-default">Settings</button>
+            <div id="theme-settings" class="well collapse">
+                <form role="form">
+                    <fieldset>
+                        <legend>Theme</legend>
+                        <label class="radio-inline">
+                            <input type="radio" name="theme" value="default" checked> Default
+                        </label>
+                        <label class="radio-inline">
+                            <input type="radio" name="theme" value="traditional"> Traditional
+                        </label>
+                        <label class="radio-inline">
+                            <input type="radio" name="theme" value="default"> Dark
+                        </label>
+                    </fieldset>
+                    <div class="form-group">
+                        <label>Width</label>
+                        <input type="range" min="1" max="5" step="1" value="2">
+                    </div>
+                    <div class="form-group">
+                        <label>Line Spacing</label>
+                        <input type="range" min="1" max="5" step="1" value="3">
+                    </div>
+                </form>
             </div>
-
-            <div class="jumbotron">
-                <h1>'Allo, 'Allo!</h1>
-                <p class="lead">Always a pleasure scaffolding your apps.</p>
-                <p><a class="btn btn-lg btn-success" href="#">Splendid!</a></p>
-            </div>
-
-            <div class="row marketing">
-                <div class="col-lg-6">
-                    <h4>HTML5 Boilerplate</h4>
-                    <p>HTML5 Boilerplate is a professional front-end template for building fast, robust, and adaptable web apps or sites.</p>
-
-                    <h4>Sass</h4>
-                    <p>Sass is the most mature, stable, and powerful professional grade CSS extension language in the world.</p>
-
-                    <h4>Bootstrap</h4>
-                    <p>Sleek, intuitive, and powerful mobile first front-end framework for faster and easier web development.</p>
-                    <h4>Modernizr</h4>
-                    <p>Modernizr is an open-source JavaScript library that helps you build the next generation of HTML5 and CSS3-powered websites.</p>
-
-                </div>
-            </div>
-
-            <div class="footer">
-                <p>♥ from the Yeoman team</p>
-            </div>
-        </div>
-
-        <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
-        <script>
-            (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
-            function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
-            e=o.createElement(i);r=o.getElementsByTagName(i)[0];
-            e.src='//www.google-analytics.com/analytics.js';
-            r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
-            ga('create','UA-XXXXX-X');ga('send','pageview');
-        </script>
+        </div><!-- .container -->
+        <div class="container-fluid">
+            <article>
+                <h1>Lorem Ipsum Dolor sit Amet</h1>
+                <p>Consectetur adipiscing elit. Etiam quis libero sollicitudin, imperdiet libero sit amet, vestibulum augue. Nulla eget nunc sit amet justo interdum tincidunt. Nulla arcu mi, blandit at euismod et, porttitor quis ligula. Ut sapien odio, pharetra eu quam non, tempus eleifend ipsum. Sed sed tristique quam. In porttitor ornare urna ut facilisis. Ut lacus turpis, blandit eu ante id, lobortis tristique neque. Integer nisl libero, eleifend ut commodo eget, rutrum in libero. Nunc porttitor sollicitudin tortor, eu facilisis velit volutpat id.</p>
+                <p>Aliquam sapien sapien, mattis quis purus consequat, placerat elementum enim. Donec pretium velit tempus sapien varius tristique. Curabitur eu dui mollis, fermentum augue ac, malesuada purus. Quisque convallis massa eu ligula tristique auctor. Nam non pharetra purus, in tempus orci. Donec lacus lorem, imperdiet ut aliquam ut, molestie vitae tellus. Etiam interdum feugiat magna, non rhoncus libero. In rhoncus, nisl at dignissim interdum, nisi orci sagittis nunc, quis viverra elit justo et tellus. Integer eu dolor gravida, bibendum risus eu, fringilla orci. Quisque lacinia interdum aliquam.</p>
+                <p>Nullam id sapien odio. Fusce dapibus vestibulum quam at molestie. Proin vitae consectetur nisi. Pellentesque in lacinia nunc, ut rhoncus nunc. Pellentesque a lacus pretium enim sollicitudin aliquet vitae et diam. Suspendisse eu ornare nunc. Pellentesque justo sem, euismod ut facilisis ut, egestas eget augue. Phasellus porta augue non purus bibendum, vel venenatis nisi ullamcorper. Quisque vel nunc at metus fermentum tempor.</p>
+                <p>Duis tincidunt nisi eget lectus fringilla, sed pulvinar urna malesuada. Donec convallis lectus ut facilisis cursus. Curabitur feugiat gravida erat eget dignissim. Pellentesque vitae urna a massa tempor elementum a nec nibh. Nullam non turpis mi. Pellentesque convallis commodo urna. Mauris urna sapien, consectetur in egestas sed, accumsan et tellus. Morbi sit amet dictum risus. Morbi dictum hendrerit accumsan.</p>
+                <p>Curabitur ante sem, rhoncus sit amet rutrum non, mattis eget lorem. Sed placerat, sem eget semper mattis, felis lectus pellentesque metus, sit amet mattis turpis leo ut magna. Nam dapibus ullamcorper nisl at pulvinar. Proin urna quam, pellentesque non sodales eu, eleifend sed elit. Sed adipiscing ipsum sed imperdiet egestas. Nullam ac risus elementum, ornare dui ac, malesuada ligula. Maecenas ut diam sed ante tincidunt suscipit ac ornare justo.</p>
+                <p>Fusce in enim in felis aliquam dictum. Vivamus eu accumsan metus. Maecenas sed lectus a sapien feugiat facilisis. In in augue lacus. Nam varius pretium elit a pellentesque. Vivamus lobortis mollis risus, in bibendum tortor. Nunc sagittis nulla id fringilla tempor. Nam nisl elit, condimentum nec nisi sit amet, consectetur molestie orci. Quisque fermentum adipiscing odio. Nunc in tincidunt sem. Duis tempor nibh non mauris posuere, eleifend convallis eros mollis. Sed eu facilisis nulla, eu ultricies eros.</p>
+                <p>Morbi sollicitudin elementum ipsum, a hendrerit mauris euismod vel. Mauris consectetur purus vel erat aliquet porttitor. Nam convallis tempus dui, et ultrices urna congue et. Suspendisse potenti. Donec accumsan velit nec lacus adipiscing ultricies. In quis ligula at nunc blandit porttitor. Proin id aliquam lorem, sed rhoncus felis. Mauris vitae felis elit. Morbi sit amet gravida mauris, eget ultrices lorem. Nunc malesuada aliquam lectus eget eleifend. Pellentesque vulputate tellus eget tincidunt rhoncus. Nam sem tortor, malesuada sit amet rutrum sit amet, interdum vitae lorem. Aliquam ultrices eros id tempus pharetra.</p>
+            </article>
+        </div><!-- .container-fluid -->
 
         <!-- build:js scripts/vendor.js -->
         <!-- bower:js -->
@@ -96,5 +89,5 @@
         <!-- build:js scripts/main.js -->
         <script src="scripts/main.js"></script>
         <!-- endbuild -->
-</body>
+    </body>
 </html>
