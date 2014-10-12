@@ -3,8 +3,8 @@ title: Style Changer
 email: swashcap@gmail.com
 description: > # this means to ignore newlines until "baseurl:"
     Experimental style changer with AngularJS.
-baseurl: "" # the subpath of your site, e.g. /blog/
-url: "http://swashcap.github.io/style-changer/" # the base hostname & protocol for your site
+baseurl: "/style-changer/" # the subpath of your site, e.g. /blog/
+url: "http://swashcap.github.io" # the base hostname & protocol for your site
 twitter_username: swashcap
 github_username:  swashcap
 
