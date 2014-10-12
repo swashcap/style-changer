@@ -5,16 +5,13 @@
 angular.module('styleChangerApp', []);
 
 angular.module('styleChangerApp')
-    // .run(function ($rootScope) {
-    //     console.log($rootScope);
-    // })
     .controller('FormCtrl', function ($scope, Settings) {
         /**
          * Set current user settings. In a real-world app, this would
          * rely on a service to pull in the user's settings from the
          * server.
          */
-        $scope.currentTheme = 'dark';
+        $scope.currentTheme = 'default';
         $scope.currentWidth = 2;
         $scope.currentLineSpacing = 3;
 
@@ -46,6 +43,9 @@ angular.module('styleChangerApp')
         $scope.$watch('currentLineSpacing', function(newLineSpacing) {
             Settings.lineSpacing(newLineSpacing);
         });
+
+        // Initialize the theme
+        Settings.theme($scope.currentTheme);
     });
 
 angular.module('styleChangerApp')
