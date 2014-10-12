@@ -12,6 +12,7 @@ angular.module('styleChangerApp')
          * server.
          */
         $scope.currentTheme = 'default';
+        $scope.currentTextSize = 2;
         $scope.currentWidth = 2;
         $scope.currentLineSpacing = 3;
 
@@ -37,6 +38,9 @@ angular.module('styleChangerApp')
             Settings.theme(newTheme);
         };
 
+        $scope.$watch('currentTextSize', function (newTextSize) {
+            Settings.textSize(newTextSize);
+        });
         $scope.$watch('currentWidth', function (newWidth) {
             Settings.width(newWidth);
         });
@@ -51,9 +55,11 @@ angular.module('styleChangerApp')
 angular.module('styleChangerApp')
     .factory('Settings', function () {
         var THEME_CLASS_PREFIX = 'is-theme-';
+        var TEXT_SIZE_CLASS_PREFIX = 'is-text-size-';
         var WIDTH_CLASS_PREFIX = 'is-width-';
         var LINE_SPACING_CLASS_PREFIX = 'is-line-spacing-';
         var themeClassPattern = new RegExp(THEME_CLASS_PREFIX + '\\w+', 'g');
+        var textSizeClassPattern = new RegExp(TEXT_SIZE_CLASS_PREFIX + '\\w+', 'g');
         var widthClassPattern = new RegExp(WIDTH_CLASS_PREFIX + '\\d', 'g');
         var lineSpacingClassPattern = new RegExp(LINE_SPACING_CLASS_PREFIX + '\\d', 'g');
 
@@ -70,6 +76,12 @@ angular.module('styleChangerApp')
                     return (className.match(themeClassPattern) || []).join(' ');
                 });
                 $body.addClass(THEME_CLASS_PREFIX + theme);
+            },
+            textSize: function (textSize) {
+                $body.removeClass(function (index, className) {
+                    return (className.match(textSizeClassPattern) || []).join(' ');
+                });
+                $body.addClass(TEXT_SIZE_CLASS_PREFIX + textSize);
             },
             width: function (width) {
                 $body.removeClass(function (index, className) {
