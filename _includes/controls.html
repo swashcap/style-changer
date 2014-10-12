@@ -1,0 +1,38 @@
+<div class="controls">
+    <form ng-controller="FormCtrl" id="theme-settings" class="controls__form" role="form">
+        <fieldset class="controls__form__group">
+            <legend>Theme</legend>
+            <label
+                ng-repeat="theme in themes"
+                ng-click="setTheme(theme.slug)"
+                class="radio-inline">
+                <input
+                    type="radio"
+                    ng-model="currentTheme"
+                    name="theme"
+                    value="{{ theme.slug }}"> <span>{{ theme.name }}</span>
+            </label>
+        </fieldset>
+        <div class="controls__form__group">
+            <label>Text Size</label>
+            <input
+                type="range"
+                ng-model="currentTextSize"
+                min="1" max="5" step="1">
+        </div>
+        <div class="controls__form__group">
+            <label>Width</label>
+            <input
+                type="range"
+                ng-model="currentWidth"
+                min="1" max="5" step="1">
+        </div>
+        <div class="controls__form__group">
+            <label>Line Spacing</label>
+            <input
+                type="range"
+                ng-model="currentLineSpacing"
+                min="1" max="5" step="1">
+        </div>
+    </form>
+</div><!-- .controls -->
