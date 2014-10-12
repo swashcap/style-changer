@@ -1,5 +1,10 @@
 <div class="controls">
-    <form ng-controller="FormCtrl" id="theme-settings" class="controls__form" role="form">
+    <form
+        ng-controller="FormCtrl"
+        ng-cloak=""
+        id="theme-settings"
+        class="controls__form">
+
         <fieldset class="controls__form__group">
             <legend>Theme</legend>
             <label
@@ -10,7 +15,7 @@
                     type="radio"
                     ng-model="currentTheme"
                     name="theme"
-                    value="{{ theme.slug }}"> <span>{{ theme.name }}</span>
+                    value="{{ theme.slug }}"> <span>{% raw %}{{ theme.name }}{% endraw %}</span>
             </label>
         </fieldset>
         <div class="controls__form__group">
